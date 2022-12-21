@@ -1,0 +1,30 @@
+{% include "header.html" %}
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url({{ url_for('static', filename='img/about-bg.jpg')}})">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="page-heading">
+            <h1>About Me</h1>
+            <span class="subheading">This is what I do.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <p>My name is Jahnavi Peraka from Nizampet, Hyderabad. I am an engineering graduate specialized in Electronics and Communication Engineering studied in JNTUK-University College Of Enginnering Vizianagaram.</p>
+        <p>I,ve created a Web Application named Jahnavi's Blog to share my thoughts on any topic that I've experianced.</p>
+      </div>  
+    </div>
+  </div>
+
+  <hr>
+
+  {% include "footer.html" %}

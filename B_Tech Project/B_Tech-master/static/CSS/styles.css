@@ -1,0 +1,137 @@
+.colored-section{
+  background-color: #9E7676;
+  padding: 4% 7%;
+}
+
+.white-section{
+  background-color: #fff;
+  padding: 7% 10%;
+  color: #9E7676;
+}
+
+h1, h2, h3, p {
+  font-family: "Ununtu";
+}
+
+.section-heading {
+  font-size: 3rem;
+  color: #594545;
+  padding-bottom: 3.6%;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Navigation bar */
+
+.navbar {
+  padding: 0 0 4.5rem;
+}
+
+#main-name{
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-family: "Ununtu"
+}
+
+.nav-item {
+  padding: 0 18px;
+  font-size: 1.2rem;
+  font-family: "Montserrat-Light";
+}
+
+/* Title section */
+.title-image{
+  border-radius: 120%;
+  padding: 15% 7%;
+  width: 100%;
+  height: 120%;
+}
+
+.big-heading{
+  padding: 15% 7% 0;
+  text-align: left;
+  font-weight: bold;
+  color: #fff;
+  line-height: 5rem;
+  font-size: 4.5rem;
+}
+
+/* Brief section */
+.brief{
+  line-height: 3rem;
+  font-weight: 300;
+}
+
+/* Techniques */
+#techniques{
+  color: #fff;
+  text-align: center;
+  line-height: 3rem;
+  font-weight: 500;
+  padding: 7% 12%;
+  font-size: 2rem;
+}
+
+.testimonial_text{
+  color: #594545;
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+
+#controller {
+  padding-top: 15%;
+}
+
+.filter-heading {
+  color: #594545;
+  font-size: 3rem;
+  font-weight: bold;
+  padding-bottom: 5%;
+}
+/* Performance metrics */
+.icon {
+  color: #372948;
+}
+
+.performance-metrics {
+  text-align: center;
+}
+
+.metric-box p {
+  font-size: 1.5rem;
+}
+
+.metric-title {
+  font-size: 2rem;
+  color: #815B5B;
+  font-weight: 700;
+}
+
+/* Results */
+.result-box {
+  padding : 5% 0;
+}
+
+.card-header {
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+}
+
+.card-body {
+  font-size: 1.2rem;
+  color: #594545;
+  background-color: #EDE4E0;
+  line-height: 2rem;
+}
+
+/* contact */
+#contact {
+  text-align: center;
+  padding: 7% 15%;
+}
+
+.footer_icon {
+  padding: 1%;
+  color: #111;
+}

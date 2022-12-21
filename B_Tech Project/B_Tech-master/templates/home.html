@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Style sheets -->
+  <link rel="stylesheet" href="static/CSS/styles.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+  <!-- Option 2: jQuery, Popper.js, and Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;900&family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/2ca3d3ecd3.js" crossorigin="anonymous"></script>
+
+  <title>B.Tech Project Web Page</title>
+</head>
+
+<body>
+  <!-- Navigation bar -->
+  <section class="colored-section" id="title">
+    <div class="container-fluid">
+
+      <!-- Nav Bar -->
+      <nav class="navbar navbar-expand-lg navbar-dark fixed">
+        <a class="navbar-brand" href="" id="main-name">PROJECT</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#title">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#brief-sec">INTRODUCTION</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#techniques">TECHNIQUES</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#metrics">METRICS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#results">RESULTS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">CONTACT</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- Title section -->
+
+      <div class="row">
+        <div class="col-lg-6">
+          <h1 class="big-heading">Motion Removal Techniques On Bio-Medical Images.</h1>
+        </div>
+        <div class="col-lg-6">
+          <img src="https://whataftercollege.com/wp-content/uploads/2015/07/featured-image-biomedical-scaled.jpg" class="title-image">
+        </div>
+      </div>
+
+  </section>
+
+  <!-- Brief section -->
+  <section class="white-section" id="brief-sec">
+    <div class="container-fluid">
+      <h1 class="section-heading">Introduction</h1>
+      <h2 class="brief">In the rescent years, there is a growing focus on magnetic imaging techniques.
+        One of the problem with this is undersampling the data which produces corrupted image in which the motion may be encountered.
+        During the Fast MRI scan which generally works on under sampled data there
+        will be a chance of noise occurrence in scanning report due to patient motion. The
+        main aim of this project is to remove the motion in the scanning which caused during
+        the Fast MRI scan. The noise due to patient motion during the Fast MRI can be
+        removed by adapting different Filtering Techniques. The performance comparison of
+        these filtering techniques also will be done in order to find out which filter is giving
+        best performance in removing motion in image. This will help in proper diagnosis of
+        the patient.</h2>
+    </div>
+  </section>
+
+  <!-- Techniques section -->
+  <section class="colored-section" id="techniques">
+    <div class="container" id=container-style>
+      <h1 class="filter-heading">Filtering Techniques</h1>
+      <div id="testimonial-carousle" class="carousel slide" data-ride="false">
+        <ol class="carousel-indicators">
+          <li data-target="#testimonial-carousle" data-slide-to="0" class="active"></li>
+          <li data-target="#testimonial-carousle" data-slide-to="1"></li>
+          <li data-target="#testimonial-carousle" data-slide-to="2"></li>
+          <li data-target="#testimonial-carousle" data-slide-to="3"></li>
+          <li data-target="#testimonial-carousle" data-slide-to="4"></li>
+          <li data-target="#testimonial-carousle" data-slide-to="5"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active container-fluid">
+            <h2 class="testimonial_text">Mean filtering</h2>
+            <p>Mean filtering is uded to blur an image to get rid of noise which calculates the mean of all the pixels in the kernel or mask and replacing each center pixel wih that mean value.</p>
+          </div>
+          <div class="carousel-item container-fluid">
+            <h2 class="testimonial_text">Median filtering</h2>
+            <p>Median filter also much similar to the mean filter but, instead of calculating
+              means, we calculate the median of pixel values. And replace the pixel value of the
+              center element with this median value. In the above two filters replacing value is a
+              new value but in the median filter, the median is one of the pixel values. Median
+              filters help to preserve edges and reduce salt and pepper noise immensely.</p>
+          </div>
+          <div class="carousel-item container-fluid">
+            <h2 class="testimonial_text">Gaussian filtering</h2>
+            <p>This filter is a 2-D convolutional operator. It is used to blur images. Also, it
+              removes details and noises. Gaussian filter is way similar to mean filter but, instead of
+              mean kernel, it uses Gaussian kernel. We should input the height and width (which
+              should be odd and positive) of the kernel along with the standard deviation to the
+              inbuilt kernel function. That kernel has a shape of Gaussian hump. Gaussian kernel
+              weights pixels at its center much more strongly than its boundaries. There are different
+              Gaussian kernels. Based on the kernel size, output image will be different.</p>
+          </div>
+          <div class="carousel-item container-fluid">
+            <h2 class="testimonial_text">Linear Smoothing</h2>
+            <p>The most common, simplest and fastest kind of filtering is achieved by linear
+              filters. The linear filter replaces each pixel with a linear combination of its neighbors
+              and convolution kernel is used in prescription for the linear combination.</p>
+          </div>
+          <div class="carousel-item container-fluid">
+            <h2 class="testimonial_text">Bilateral Smoothing</h2>
+            <p>Bilateral filtering is highly efficient in preserving edges by removing most of
+              the noise. It replaces the intensity of each pixel with a weighted average of pixel
+              intensity values from neighborhood pixels. This weight is based on the Gaussian
+              distribution. The bilateral filtering technique is at a low pace compared to the
+              remaining others.</p>
+          </div>
+          <div class="carousel-item container-fluid">
+            <h2 class="testimonial_text">Block matching 3D Smoothing</h2>
+            <p>BM3D is a natural extension of the NLM method that also utilizes the notion
+              that natural images have self-spatial similarities. First, the algorithm searches for
+              patches in the image that are similar to the intensities of the patch that has to be de
+              noised. This method builds a 3D matrix where the first two dimensions are the size of
+              the patch while the third dimension is the aggregated patches. Unlike NLM which
+              applies a 1D filter on the 3rd dimension of this aggregated array, BM3D applies a 3D
+              unitary sparsifying transform.</p>
+          </div>
+        </div>
+        <a class="left-carousel-control-prev" href="#testimonial-carousle" data-slide="prev">
+          <span class="sr-only">Previous</span>
+          <span class="carousel-control-prev-icon" id="controller" aria-hidden="true"></span>
+        </a>
+        <a class="right-carousel-control" href="#testimonial-carousle" data-slide="next">
+          <span class="sr-only">Next</span>
+          <span class="carousel-control-next-icon" id="controller" aria-hidden="true"></span>
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- Performance metrics section -->
+  <section class="white-section" id="metrics">
+    <div class="performance-metrics">
+      <h1 class="section-heading">Performance Metrics</h1>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="metric-box col-lg-4">
+            <i class="icon fa fa-check-circle-o fa-3x" aria-hidden="true"></i>
+            <h3 class="metric-title">Mean square error(MSE)</h3>
+            <p>It may be defined as the average squared difference between an original image and a denoised image.</p>
+          </div>
+          <div class="metric-box col-lg-4">
+            <i class="icon fa fa-check-circle-o fa-3x" aria-hidden="true"></i>
+            <h3 class="metric-title">Peak signal to noise ratio(PSNR)</h3>
+            <p>If we want to find the loss in denoised image with respect to the original image, we calculate PSNR.</p>
+          </div>
+          <div class="metric-box col-lg-4">
+            <i class="icon fa fa-check-circle-o fa-3x" aria-hidden="true"></i>
+            <h3 class="metric-title">Structural similarity index measure(SSIM)</h3>
+            <p>The Structural Similarity Index (SSIM) is a perceptual metric that quantifies image quality degradation caused by data transmission.
+              It is generally used to check the similarity between the two images of equal size. SSIM ranges from 0 to 1.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Result section -->
+  <section class="colored-section" id="results">
+    <div class="final-results">
+      <div class="row">
+        <div class="result-box col-lg-6">
+          <div class="card">
+            <div class="card-header" style="background-color: #594545">
+              <h1>Results</h1>
+            </div>
+            <div class="card-body">
+              <p class="card-text">The filtering techniques are used to reduce the motion in the image since these techniques increases
+                the SSIM and PSNR values and decreases the MSE value compared with before
+                filtering the images. Out of six filtering techniques Block Matching
+                and 3D filtering gives the better results compared with other techniques.
+                The Block Matching and 3D filtering generally coverts the image
+                pixel values into floating point and then it does filter. This filtering after this
+                conversion will work on even small content in the images and gives more precise
+                filtering and performs better in motion reduction in the image. Hence Block Matching
+                and 3D filtering is preferred as the best filtering technique in Motion reduction in Bio
+                medical images. This filtering techniques on the fast MRI images will minimize the
+                motion and help for the doctors in proper diagnosis of the patient.</p>
+              <a href="#" class="card-link">Check Results</a>
+            </div>
+          </div>
+        </div>
+        <div class="result-box col-lg-6">
+          <div class="card">
+            <div class="card-header" style="background-color: #594545">
+              <h1>Future Scope</h1>
+            </div>
+            <div class="card-body">
+              <p class="card-text">The motion removal techniques on biomedical images developed in this
+                project can be further can be extended in the future include:
+              <ul>
+                <li>Accelerating our methods and generalizing it to the satellite images to remove
+                  motion to obtain high resolution and high-quality images.</li>
+                <li>We can also apply these filtering techniques to remove motion from the videos
+                  to obtain high efficiency and good quality videos.</li>
+              </ul>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Contact section -->
+  <section class="white-section" id="contact">
+    <div class="container-fluid">
+      <i class="fa fa-twitter fa-2x footer_icon" aria-hidden="true"></i>
+      <i class="fa fa-facebook fa-2x footer_icon" aria-hidden="true"></i>
+      <i class="fa fa-instagram fa-2x footer_icon" aria-hidden="true"></i>
+      <i class="fa fa-envelope fa-2x footer_icon" aria-hidden="true"></i>
+      <p>© Copyright 2022 Jahnavi</p>
+    </div>
+  </section>
+</body>
+
+</html>
