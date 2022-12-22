@@ -1,0 +1,20 @@
+{% include "header.html" %}
+
+
+    <section class="created-list">
+        <h1 class="today-event">Today Events - {{ date }}</h1>
+        {% for event in day_events %}
+          <div class="container">
+              <p class="all-events"><a href="{{ url_for('delete_event', event_to_delete=event, event_no=1) }}"><i class="fa-regular fa-square"></i></a> {{ event }}</p>
+          </div>
+        {% endfor %}
+        <div class="container delete-pad">
+            {% for event in completed_events %}
+              <div class="container">
+                  <p class="all-events"><a href="{{ url_for('all_list', event=event) }}" class="check-square"><i class="fa-regular fa-square-check"></i></a> <del>{{ event }}</del></p>
+              </div>
+            {% endfor %}
+        </div>
+    </section>
+  </body>
+</html>

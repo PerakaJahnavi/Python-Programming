@@ -1,0 +1,17 @@
+{% include "header.html" %}
+    <div class="container-fluid all-list">
+      <h1 class="main-date">My Todo List</h1>
+       {% for day in all_days %}
+        <div class="container-fluid">
+            <h3 class="todos">
+                <ol>
+                    <li>
+                        {{ day }} <a href="{{ url_for('todos', date=day) }}" class="arrow"> > </a>
+                    </li>
+                </ol>
+            </h3>
+        </div>
+        {% endfor %}
+    </div>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+{% include "header.html" %}
+
+    <section class="main-heading">
+      <div class="container-fluid">
+        <p>
+          <i class="fa-light fa-alarm-clock"></i>
+          Create your Todo list
+          <a type="button" class="btn btn-outline-dark float-right list-button" href="{{ url_for('create') }}">Create</a>
+        </p>
+      </div>
+    </section>
+    <section class="todo-list">
+        <div class="container-fluid">
+          <form action="{{ url_for('all_list') }}" method="post" novalidate>
+              <input type="text" class="entry" name="listing" placeholder="Type here...and click ENTER">
+          </form>
+        </div>
+          {% for event in today_events %}
+          <div class="container-fluid">
+              <h3 class="todos"><a href="{{ url_for('delete_event', event_to_delete=event, event_no=0) }}"><i class="fa-regular fa-square"></i></a> {{ event }}</h3>
+          </div>
+          {% endfor %}
+    </section>
+  </body>
+</html>

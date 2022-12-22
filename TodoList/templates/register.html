@@ -1,0 +1,19 @@
+{% include "header.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+    <div class="container login-register" >
+        <h1>{{ form_type }} Form</h1>
+        <div class="row">
+            <div class="col-lg-6 col-sm-12 col-md-12">
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        {% for message in messages %}
+                            <p class="flash-message">{{ message }}</p>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+                {{ wtf.quick_form(form, novalidate=True, button_map={"submit": "primary"}) }}
+                <a href="{{ url_for('reset_pass') }}">Forget Password</a>
+            </div>
+        </div>
+    </div>
+</html>
