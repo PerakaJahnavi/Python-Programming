@@ -1,0 +1,20 @@
+{% include "header.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+    <div class="register">
+        <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/ziyyqg8o3typ0k55x8lr" class="big-img">
+        <div class="container">
+            <h1 class="name">Add New Cafe</h1>
+            <em class="description"><h3>where you can find your comfy cafes <i class="fa-solid fa-mug-hot"></i>.</h3></em>
+        </div>
+    </div>
+    <div class="container">
+        <h1>Registration Form</h1>
+        <div class="row" style="padding: 5%;">
+          <div class="col-lg-8 col-md-10 mx-auto content">
+            {{ wtf.quick_form(form, novalidate=True, button_map={"submit": "primary"}) }}
+          </div>
+        </div>
+    </div>
+</body>
+</html>

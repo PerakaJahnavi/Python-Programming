@@ -1,0 +1,192 @@
+/* Navigation bar */
+.navbar {
+  padding: 0% 4%;
+  font-family: "Montserrat";
+}
+.nav-item {
+  padding: 0% 4%;
+  font-size: 1.5rem;
+}
+
+.navbar-brand {
+  font-size: 2.5rem;
+}
+
+#title {
+  padding: 7% 5% 0%;
+  font-family: "Open Sans";
+}
+
+.context {
+  font-size: 1.5rem;
+}
+
+/* Main Section */
+#main-section {
+  padding: 2% 5%;
+}
+
+.sample-pic {
+  width: 500px;
+  height: 170px;
+}
+
+.card-body {
+  color: #111;
+}
+
+/* cafe section */
+.big-img {
+    position: relative;
+    padding: 3% 0%;
+    width: 100%;
+    height: 800px;
+    filter: brightness(70%);
+}
+
+.cafe-name {
+   position: absolute;
+   color: #fff;
+   top: 550px;
+   left: 5%;
+}
+
+.coffee {
+   position: absolute;
+   color: #fff;
+   top: 600px;
+   left: 5%
+}
+
+.cafe-picture {
+   position: absolute;
+   color: #fff;
+   top: 650px;
+   right: 5%;
+}
+
+#likes {
+  border-style: solid;
+  border-width: medium;
+  border-color: #73AD21;
+  border-radius: 5px;
+  text-align: center;
+  color: #73AD21;
+}
+
+.likes {
+  text-align: center;
+  padding: 2% 0%;
+}
+
+#hearts {
+  padding: 2% 0%;
+}
+
+#hearts a:hover {
+  color: red;
+}
+
+.facilities {
+  padding: 3% 0% 3% 20%;
+  text-align: left;
+}
+
+#indicator {
+  text-align: left;
+}
+
+.name {
+  position: absolute;
+  top: 340px;
+  left: 36%;
+  color: #fff;
+  font-family: "Roboto Slab";
+  font-weight: bold;
+  font-size: 5rem;
+}
+
+.description {
+    position: absolute;
+    top: 440px;
+    left: 35%;
+    color: #fff;
+    font-family: "Roboto Slab";
+}
+
+.flash-message {
+    color: #DC3535;
+}
+
+@media screen and (max-width: 1030px){
+    #title {
+    padding: 15% 5% 0%;
+    }
+
+   .big-img {
+    height: 600px;
+    }
+
+   .cafe-name {
+   top: 450px;
+   }
+
+    .coffee {
+       top: 500px;
+    }
+
+    .cafe-picture {
+       top: 500px;
+    }
+
+    .likes {
+       padding: 7% 0% 0%;
+    }
+
+    #hearts {
+       padding: 7% 0%;
+    }
+
+    .name {
+        top: 250px;
+        left: 15%;
+    }
+
+    .description {
+        top: 350px;
+        left: 13%;
+    }
+
+}
+
+.commentList {
+    padding:0;
+    list-style:none;
+    max-height:200px;
+    overflow:auto;
+}
+.commentList li {
+    margin:0;
+    margin-top:10px;
+}
+.commentList li > div {
+    display:table-cell;
+}
+.commenterImage {
+    width:30px;
+    margin-right:5px;
+    height:100%;
+    float:left;
+}
+.commenterImage img {
+    width:100%;
+    border-radius:50%;
+}
+.commentText p {
+    margin:0;
+}
+.sub-text {
+    color:#aaa;
+    font-family:verdana;
+    font-size:11px;
+}

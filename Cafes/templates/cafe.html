@@ -1,0 +1,100 @@
+{% include "header.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+  <div class="cafe">
+    <img src="{{ choosen_cafe.img_url }}" class="big-img">
+    <h1 class="cafe-name">{{ choosen_cafe.name }}</h1>
+    <h3 class="coffee"><i class="fa-solid fa-mug-hot"></i> COFFEE: {{ choosen_cafe.coffee_price }}</h3>
+    <a href="{{ choosen_cafe.img_url }}" class="cafe-picture"><i class="fa-regular fa-image fa-2x"></i></a>
+  </div>
+  <div class="content">
+    <div class="row">
+      <div class="col-lg-6 likes">
+        <h2>FACILITIES</h2>
+        <div class="row facilities">
+          <div class="col-6">
+            <h4><i class="fa-sharp fa-solid fa-wifi fa-lg"></i> Stable wi-fi available</h4>
+            {% if choosen_cafe.has_wifi == 0 %}
+              <h4 id="indicator" style="color: red;"><i class="fa-regular fa-circle-xmark fa-lg"></i></h4>
+            {% else %}
+              <h4 id="indicator" style="color: green;"><i class="fa-regular fa-circle-check fa-lg"></i></h4>
+            {% endif %}
+          </div>
+          <div class="col-6">
+            <h4><i class="fa-solid fa-plug fa-lg"></i> Power sockets</h4>
+            {% if choosen_cafe.has_sockets == 0 %}
+              <h4 id="indicator" style="color: red;"><i class="fa-regular fa-circle-xmark fa-lg"></i></h4>
+            {% else %}
+              <h4 id="indicator" style="color: green;"><i class="fa-regular fa-circle-check fa-lg"></i></h4>
+            {% endif %}
+          </div>
+        </div>
+        <div class="row facilities">
+          <div class="col-6">
+            <h4><i class="fa-solid fa-headset fa-lg"></i> Audio/Vedio calls</h4>
+            {% if choosen_cafe.can_take_calls == 0 %}
+              <h4 id="indicator" style="color: red;"><i class="fa-regular fa-circle-xmark fa-lg"></i></h4>
+            {% else %}
+              <h4 id="indicator" style="color: green;"><i class="fa-regular fa-circle-check fa-lg"></i></h4>
+            {% endif %}
+          </div>
+          <div class="col-6">
+            <h4><i class="fa-solid fa-toilet-portable fa-lg"></i> Toilets</h4>
+            {% if choosen_cafe.has_toilet == 0 %}
+              <h4 id="indicator" style="color: red;"><i class="fa-regular fa-circle-xmark fa-lg"></i></h4>
+            {% else %}
+              <h4 id="indicator" style="color: green;"><i class="fa-regular fa-circle-check fa-lg"></i></h4>
+            {% endif %}
+          </div>
+        </div>
+        <div class="row facilities">
+          <div class="col-6">
+            <h4><i class="fa-solid fa-chair fa-lg"></i> Seats available: <strong style="color: green;">{{ choosen_cafe.seats }}</strong></h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 likes">
+        <h3>Do you like visiting here!</h3>
+        <div class="row" id="hearts">
+          <div class="col-6" style="text-align: right;">
+            <a href="{{ url_for('likes', cafe_id=choosen_cafe.id) }}"><i class="fa-solid fa-heart fa-4x"></i></a>
+          </div>
+          <div class="col-6" style="text-align: left;">
+            <a><i class="fa-solid fa-heart-crack fa-4x"></i></a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <h3><i class="fa-solid fa-location-dot"></i> <a href="https://g.page/scigallerylon?share">Location</a></h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="container">
+      <h2>REVIEWS</h2>
+
+      {{ ckeditor.load() }}
+      {{ ckeditor.config(name='comment_text') }}
+      {{ wtf.quick_form(form, novalidate=True, button_map={"submit": "primary"}) }}
+      <div class="container">
+        {% for comment in choosen_cafe.comments: %}
+        <ul class="commentList">
+          <li>
+              <div class="commenterImage">
+                <img src="{{ comment.comment_user.email | gravatar }}"/>
+              </div>
+              <div class="commentText">
+                <p>{{comment.text|safe}}</p>
+                <span class="date sub-text">{{comment.comment_user.name}}</span>
+              </div>
+          </li>
+        </ul>
+      {% endfor %}
+      </div>
+    </div>
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+{% include "header.html" %}
+
+  <!-- Title section -->
+  <div class="container-fluid" id="title">
+    <h1>LONDON</h1>
+    <p class="context">The best work and study-friendly cafes in London. Find venues with free and reliable Wi-Fi hotspots, ample power sockets.</p>
+  </div>
+  <!-- Main Section -->
+  <section id="main-section">
+    <h2>{{ cafes |length }} WORK FRIENDLY PLACES</h2>
+    {% for cafe in cafes: %}
+      <a href="{{ url_for('cafe', cafe_id=cafe.id, cafe_name=cafe.name) }}" class="card-link">
+        <div class="card border-light mb-3" style="max-width: 800px;">
+          <div class="row g-0">
+            <div class="col-4">
+              <img src="{{ cafe.img_url }}" class="img-fluid rounded-start sample-pic" alt="...">
+            </div>
+            <div class="col-8">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-8">
+                    <h4 class="card-title">{{ cafe.name }}</h4>
+                    <h5 class="card-text">{{ cafe.location }}</h5>
+                    <h6 class="card-text" style="color: brown"><i class="fa-solid fa-mug-hot fa-lg"></i> Coffee: {{ cafe.coffee_price }}</h6>
+                  </div>
+                  <div class="col-4">
+                    <h5 id="likes"><i class="fa-regular fa-heart"></i> | {{ cafe.likes_percent }}%</h5>
+                    <p style="text-align: center;"><i class="fa-regular fa-heart"></i> {{ cafe.likes }} <i class="fa-regular fa-comment"></i> {{ cafe.comments |length }}</p>
+                  </div>
+                </div
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+    {% endfor %}
+  </section>
+
+</body>
+
+</html>
