@@ -1,0 +1,95 @@
+.profile {
+  text-align: center;
+  background-color: #B8E8FC;
+  font-family: Roboto Slab;
+  padding: 10% 5%;
+}
+
+.profile-image {
+  width: 10%;
+  height: 10%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.name {
+  padding: 2% 0% 0%;
+}
+
+.heart {
+  color: red;
+}
+
+.intro {
+  text-align: left;
+  background-color: #B8E8FC;
+  padding: 5%;
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-family: Roboto Slab;
+}
+
+.education, .projects, .gui {
+  padding: 5%;
+  text-align: center;
+}
+
+.card-img-top {
+  position: relative;
+  padding: 3%;
+  filter: brightness(60%);
+}
+
+.card-name {
+   position: absolute;
+   color: #fff;
+   padding: 30% 10% 0%;
+   font-weight: bold;
+   font-size: 2rem;
+   font-family: Ubuntu;
+}
+
+.project {
+  padding: 3% 2% 2%;
+}
+
+.webproject {
+  padding: 3% 2% 2%;
+  text-align: left;
+}
+
+.heading {
+  padding: 0% 0% 3%;
+  text-align: center;
+  font-family: Ubuntu;
+  font-weight: bold;
+}
+
+.about {
+  font-size: 1.3rem;
+  font-family: Roboto Slab;
+}
+
+.games{
+  background-color: #B8E8FC;
+  text-align: center;
+  padding: 5%;
+}
+
+.sub-heading {
+  padding-bottom: 2%;
+  font-family: Ubuntu;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.gui-img {
+  width: 100px;
+  height: 100px;
+}
+
+.gui-project {
+  padding: 5%;
+  background-color: #EAEAEA;
+}
