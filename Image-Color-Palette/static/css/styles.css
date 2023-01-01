@@ -1,0 +1,67 @@
+.intro {
+  background-color: #FF597B;
+  padding: 0% 3%;
+}
+
+.navbar-brand {
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: 2rem;
+  padding: 2% 3%;
+}
+
+.main-heading {
+  font-size: 5rem;
+}
+
+.heading {
+  text-align: center;
+  color: #fff;
+  font-family: Roboto Slab;
+  font-weight: bold;
+  padding: 5%;
+}
+
+.sample {
+  padding: 3%;
+  text-align: center;
+}
+
+.demo {
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: Ubuntu;
+  padding: 3% 2% 2%;
+  text-align: center;
+}
+
+.original-img {
+  width: 500px;
+  height: 500px;
+}
+
+.color-img {
+  width: 700px;
+  height: 600px;
+}
+
+.color-img-output {
+  width: 1500px;
+  height: 600px;
+}
+.upload-form {
+  padding: 6% 10%;
+  background-color: #FF597B;
+  color: #fff;
+  font-family: Ubuntu;
+}
+
+.sub-heading {
+  padding: 1% 0%;
+}
+
+.palette {
+    padding: 5%;
+    width: 100px;
+    height: 50px;
+}
