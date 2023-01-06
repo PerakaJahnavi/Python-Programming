@@ -1,0 +1,22 @@
+{% include "header.html" %}
+
+  <section class="cart-section">
+    <div class="cart-pad">
+      <h1 class="cart-main"><i class="fa-solid fa-cart-shopping"></i>Searched Items</h1>
+      <br>
+      {% for item in all_items %}
+      <div class="row cart-item">
+        <div class="col-lg-4 col-sm-4 col-md-4 cart-img">
+          <a href="{{ url_for('item', item_id=item.id) }}"><img class="cart-img" src="{{ item.img_url }}"></a>
+        </div>
+        <div class="col-lg-8 col-sm-8 col-md-8 cart-info">
+          <h1 class="cart-head">{{ item.item_name }}</h1>
+          <em><h3 class="cart-sub">Brand: {{ item.item_sub }}</h3></em>
+          <h1 class="cart-price">₹ {{ item.price }}</h1>
+          <a href=""><button type="button" class="btn btn-lg btn-primary buy">Buy now</button></a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+</body>

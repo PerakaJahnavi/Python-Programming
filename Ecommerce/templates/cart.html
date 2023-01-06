@@ -1,0 +1,31 @@
+{% include "header.html" %}
+
+  <section class="cart-section">
+    <div class="cart-pad">
+      <h1 class="cart-main"><i class="fa-solid fa-cart-shopping"></i> Shopping Cart</h1>
+      <br>
+      {% for item in all_items %}
+      <div class="row cart-item">
+        <div class="col-lg-4 col-sm-4 col-md-4 cart-img">
+          <a href="{{ url_for('item', item_id=item.cart_item.id) }}"><img class="cart-img" src="{{ item.cart_item.img_url }}"></a>
+        </div>
+        <div class="col-lg-8 col-sm-8 col-md-8 cart-info">
+          <h1 class="cart-head">{{ item.cart_item.item_name }}</h1>
+          <em><h3 class="cart-sub">Brand: {{ item.cart_item.item_sub }} <a class="cart-delete" href="{{ url_for('delete_cart_item', item_id=item.cart_item.id) }}">✘</a></h3></em>
+          <h1 class="cart-price">₹ {{ item.cart_item.price }}</h1>
+          <a href="{{ url_for('stripe_pay') }}"><button type="button" class="btn btn-lg btn-primary buy" id="buy_now_btn">Buy now</button></a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  <script src="https://js.stripe.com/v3/"></script>
+  {#
+  <script>
+    const checkout_public_key = '{{checkout_public_key}}';
+    const checkout_session_id = '{{checkout_session_id}}';
+  </script>
+  #}
+  <script src="{{ url_for('static', filename='script-ajax.js') }}"></script>
+
+</body>

@@ -1,0 +1,20 @@
+{% include "header.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+    <div class="register">
+        <img src="https://ak.picdn.net/shutterstock/videos/25279418/thumb/1.jpg" class="big-img">
+        <div class="container">
+            <h1 class="name">Registration</h1>
+            <em class="description"><h3>Everything is here...</h3></em>
+        </div>
+    </div>
+    <div class="container">
+        <h1>Registration Form</h1>
+        <div class="row" style="padding: 5%;">
+          <div class="col-lg-8 col-md-10 mx-auto content">
+            {{ wtf.quick_form(form, novalidate=True, button_map={"submit": "primary"}) }}
+          </div>
+        </div>
+    </div>
+</body>
+</html>

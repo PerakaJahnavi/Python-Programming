@@ -1,0 +1,279 @@
+/* Navigation bar */
+.navbar {
+  padding: 0% 4%;
+  font-family: "Ubuntu";
+}
+
+.nav-item {
+  padding: 0% 4%;
+  font-size: 1.5rem;
+}
+
+.navbar-brand {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+#navbarNav{
+  padding: 0% 7%;
+}
+
+.context {
+  font-size: 1.5rem;
+}
+
+.intro {
+  padding: 6% 4%;
+}
+
+.sub-brief{
+  padding: 0% 0% 3%;
+}
+
+body {
+  font-family: Roboto Slab;
+}
+
+.carousel-item {
+  background-color: #C0DEFF;
+  text-align: center;
+}
+
+.item-img {
+  width: 500px;
+  height: 400px;
+  padding: 7%;
+}
+
+.item-brief {
+  padding: 10% 5%;
+}
+
+/* loginform */
+.name {
+  position: absolute;
+  top: 340px;
+  left: 36%;
+  color: #fff;
+  font-family: "Roboto Slab";
+  font-weight: bold;
+  font-size: 5rem;
+}
+
+.description {
+    position: absolute;
+    top: 440px;
+    left: 35%;
+    color: #fff;
+    font-family: "Roboto Slab";
+}
+
+.flash-message {
+    color: #DC3535;
+}
+
+.big-img {
+    position: relative;
+    padding: 3% 0%;
+    width: 100%;
+    height: 800px;
+    filter: brightness(70%);
+}
+
+.each-item {
+    padding: 3% 2%;
+}
+
+.card-img-top, .cart-img {
+    width: 280px;
+    height: 300px;
+    text-align: center;
+}
+
+.card-body {
+    background-color: #EFF5F5;
+}
+
+.item-name{
+    padding: 15% 7%;
+    font-weight: bold;
+}
+
+.main-item-head {
+    font-size: 3rem;
+}
+
+.item-cost {
+    color: #FF7B54;
+}
+
+.item-brand {
+    color: #0081C9;
+}
+
+.item-picture{
+    width: 700px;
+    height: 900px;
+    padding: 15% 7%;
+}
+
+.order-buttons {
+    padding: 2%;
+}
+
+.buy {
+    padding: 10px 150px;
+    border-radius: 30px;
+}
+
+.cart-info{
+    padding: 3%;
+    background-color: #DFD3C3;
+}
+
+.cart-item {
+    padding: 2% 0%;
+}
+
+.cart-head{
+    font-size: 2rem;
+  }
+
+.cart-sub{
+    font-size: 1.5rem;
+    color: #F06292;
+}
+
+.cart-price{
+    font-size: 1.8rem;
+    color: #367E18;
+}
+
+.cart-pad {
+    padding: 8% 5% 5%;
+}
+
+.cart-main {
+    font-family: Ubuntu;
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
+.cart-delete{
+    color: red;
+    font-size: 2rem;
+}
+
+.thank-section {
+    background-color: #DFD3C3;
+    text-align: center;
+    padding: 12%;
+}
+
+.check {
+    color: green;
+}
+
+.footer-section {
+    padding: 5%;
+    text-align: center;
+}
+
+@media screen and (max-width: 1030px){
+  .navbar-brand {
+    font-size: 1.8rem;
+  }
+
+  .nav-item {
+    font-size: 1.2rem;
+  }
+
+  .navbar-toggler {
+    font-size: 1rem;
+  }
+
+  .intro {
+    padding: 10% 4%;
+  }
+
+  .item-brief {
+    padding: 0% 5% 7%;
+  }
+
+  .name {
+        top: 250px;
+        left: 15%;
+  }
+
+  .description {
+        top: 350px;
+        left: 13%;
+  }
+
+  .big-img {
+    height: 600px;
+  }
+
+  .each-item {
+    padding: 3% 7%;
+  }
+
+  .item-name{
+    padding: 20% 7%;
+  }
+
+  .main-item-head {
+    font-size: 2rem;
+  }
+
+  .item-brand {
+    font-size: 1.3rem;
+  }
+
+  .item-picture{
+    width: 400px;
+    height: 600px;
+    padding: 25% 7%;
+  }
+
+  .buy {
+    padding: 10px 80px;
+  }
+
+  .cart-head{
+    font-size: 1.2rem;
+  }
+
+  .cart-sub{
+    font-size: 1rem;
+  }
+
+  .cart-price{
+    font-size: 1.2rem;
+  }
+
+  .cart-img {
+    width: 160px;
+    height: 160px;
+  }
+
+  .cart-info{
+    padding: 3% 3%;
+  }
+
+  .cart-main {
+    font-size: 3rem;
+  }
+
+  .cart-pad {
+    padding: 12% 5% 5%;
+  }
+
+  .thank-section {
+    padding: 20%;
+  }
+
+  .footer-section {
+    padding: 10%;
+  }
+}

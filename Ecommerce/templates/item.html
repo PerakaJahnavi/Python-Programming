@@ -1,0 +1,31 @@
+{% include "header.html" %}
+
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-6">
+          <a href="{{ item.img_url }}">
+            <img class="item-picture" src="{{ item.img_url }}" alt="">
+          </a>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 item-name">
+          <h2 class="main-item-head">{{ item.item_name }}</h2>
+          <em><h3 class="item-brand">Brand: {{ item.item_sub }}</h3></em>
+          <h1 class="item-cost">₹ {{ item.price }}</h1>
+          <div class="row">
+              <div class="col-12 order-buttons">
+                  <a href="{{ url_for('add_to_cart', item_id=item.id) }}"><button type="button" class="btn btn-lg btn-warning buy">Add to cart</button></a>
+              </div>
+              <div class="col-12 order-buttons">
+                  <a href="{{ url_for('stripe_pay') }}"><button type="button" class="btn btn-lg btn-primary buy" id="buy_now_btn">Buy now</button></a>
+              </div>
+          </div>
+        </div>
+    </div>
+    <script src="https://js.stripe.com/v3/"></script>
+  {#
+  <script>
+    const checkout_public_key = '{{checkout_public_key}}';
+    const checkout_session_id = '{{checkout_session_id}}';
+  </script>
+  #}
+  <script src="{{ url_for('static', filename='script-ajax.js') }}"></script>
+</body>

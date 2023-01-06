@@ -1,0 +1,46 @@
+{% include "header.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+    <div class="register">
+        <img src="https://ufv.ca/media/assets/programs/facebook/computer-skills-facebook.jpg" class="big-img">
+        <div class="container">
+            <h1 class="name">Login</h1>
+            <em class="description"><h3>Everything is here...</h3></em>
+        </div>
+    </div>
+    {% if needed_form == 0 %}
+        <div class="container">
+            <h1>Login Form</h1>
+            <div class="row" style="padding: 5%;">
+              <div class="col-lg-8 col-md-10 mx-auto content">
+                  {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        {% for message in messages %}
+                            <p class="flash-message">{{ message }}</p>
+                        {% endfor %}
+                    {% endif %}
+                  {% endwith %}
+                {{ wtf.quick_form(form, novalidate=True, button_map={"submit": "primary"}) }}
+                  <a href="{{ url_for('log_in', reset=1) }}">Forget Password</a>
+              </div>
+            </div>
+        </div>
+    {% else %}
+        <div class="container">
+            <h1>Password Reset Form</h1>
+            <div class="row" style="padding: 5%;">
+              <div class="col-lg-8 col-md-10 mx-auto content">
+                  {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        {% for message in messages %}
+                            <p class="flash-message">{{ message }}</p>
+                        {% endfor %}
+                    {% endif %}
+                  {% endwith %}
+                  {{ wtf.quick_form(reset_form, novalidate=True, button_map={"submit": "primary"}) }}
+              </div>
+            </div>
+        </div>
+    {% endif %}
+</body>
+</html>
