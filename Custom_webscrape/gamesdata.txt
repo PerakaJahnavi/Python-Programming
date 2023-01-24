@@ -1,0 +1,15 @@
+Game,App-ID,Developer,Release-Date
+Counter-Strike: Global Offensive,730,"Valve, Hidden Path Entertainment",21 August 2012 – 17:00:00 UTC (11 years ago)
+Dota 2,570,Valve,23 December 2022 – 01:28:34 UTC (5 days ago)
+Lost Ark,1599340,Smilegate RPG,11 February 2022 – 22:18:00 UTC (11 months ago)
+PUBG: BATTLEGROUNDS,578080,"KRAFTON, Inc.",21 December 2017 – 08:05:00 UTC (5 years ago)
+Apex Legends,1172470,Apex Legends™,17202197
+Call of Duty®: Modern Warfare® II | Warzone™ 2.0,1938090,Call of Duty®: Modern Warfare® II,17194688
+Team Fortress 2,440,Valve,10 October 2007 – 07:00:00 UTC (15 years ago)
+Grand Theft Auto V,271590,Rockstar North,20 December 2022 – 23:19:41 UTC (7 days ago)
+Destiny 2,1085660,Bungie,22 December 2022 – 18:36:21 UTC (5 days ago)
+Rust,252490,Facepunch Studios,8 February 2018 – 17:52:00 UTC (5 years ago)
+Wallpaper Engine,431960,Wallpaper Engine Team,16 November 2018 – 18:03:05 UTC (4 years ago)
+ELDEN RING,1245620,FromSoftware Inc.,23 December 2022 – 18:33:06 UTC (4 days ago)
+Unturned,304930,Smartly Dressed Games,26 December 2022 – 22:32:48 UTC (yesterday)
+Valheim,892970,Iron Gate AB,20 December 2022 – 09:00:11 UTC (8 days ago)
