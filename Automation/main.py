@@ -1,8 +1,8 @@
 import smtplib
 from datetime import datetime
 
-my_email = "panakaluperaka@gmail.com"
-password = "hyckjhinjkjzsrgn"
+my_email = "EMAIL"
+password = "PASSCODE"
 
 today = datetime.now().date()
 week_days = ["2023-01-24", "2023-01-29", "2023-02-05", "2023-02-12", "2023-02-19"]
