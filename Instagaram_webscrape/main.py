@@ -1,6 +1,5 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
 import time
 
 # notification_bar = driver.find_element(By.NAME, 'Turn On').click()
@@ -17,10 +16,10 @@ class InstaFollower:
         self.driver.get("https://www.instagram.com/accounts/login/")
         time.sleep(20)
         self.login_number = self.driver.find_element(By.XPATH, '//*[@id="loginForm"]/div/div[1]/div/label/input')
-        self.login_number.send_keys("7075178988")
+        self.login_number.send_keys("NUMBER")
         time.sleep(5)
         self.password = self.driver.find_element(By.XPATH, '//*[@id="loginForm"]/div/div[2]/div/label/input')
-        self.password.send_keys("Janu@090601")
+        self.password.send_keys("PASSWORD")
         time.sleep(5)
         self.login_button = self.driver.find_element(By.XPATH, '//*[@id="loginForm"]/div/div[3]/button').click()
         time.sleep(5)
