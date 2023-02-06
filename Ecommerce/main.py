@@ -11,20 +11,17 @@ import stripe
 
 app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///ecom.db"
-app.config["SECRET_KEY"] = "Jahnavi12345"
+app.config["SECRET_KEY"] = ""
 
-app.config['STRIPE_SECRET_KEY'] = 'sk_test_51MMvNFSJAtsv4FR25otBmYuCikjlKYTW2rYUANqm7d0FLEeQzDW9JP3jDCXF9cSKKPwhYY4Zuwr3GTDg28CNpeTW00Xsyqvznq'
-app.config['STRIPE_PUBLIC_KEY'] = 'pk_test_51MMvNFSJAtsv4FR2ogbWYXGVgbYatXws6ggBAIG0XaXnCDUtAlQYax30LV9ofP6b1GvH0346qZi5zgseh8VvJIRM00GUtq8xH3'
+app.config['STRIPE_SECRET_KEY'] = ''
+app.config['STRIPE_PUBLIC_KEY'] = ''
 stripe.api_key = app.config['STRIPE_SECRET_KEY']
 
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 db = SQLAlchemy(app)
 Bootstrap(app)
 ckeditor = CKEditor(app)
-# stripe_API_Pass = "Teslamusk@2001"
-# code = "kyvr-nbdy-woua-hzki-cnvu"
-# https://dashboard.stripe.com/stripecli/confirm_auth?t=ojWA8vfWs6UUZFTlJG6qreKVcIboiTcR (^C to quit)
-# > Done! The Stripe CLI is configured for Linkedin with account id acct_1MMvNFSJAtsv4FR2
+
 
 login_manager = LoginManager()
 login_manager.init_app(app)
