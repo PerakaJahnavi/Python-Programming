@@ -1,11 +1,11 @@
 from twilio.rest import Client
 import requests
 import smtplib
-auth_token = "74111715d8028aa465fb86d28d85d065"
-account_sid = "AC10aa3d704f05f1678d332669575098d0"
+auth_token = ""
+account_sid = ""
 USERS_ENDPOINT = "https://api.sheety.co/9ca5914e93c19bec83a4c1c0b467d794/flightsClub/users"
-EMAIL = "panakaluperaka@gmail.com"
-PASSWORD = "hyckjhinjkjzsrgn"
+EMAIL = ""
+PASSWORD = ""
 
 
 class NotificationManager:

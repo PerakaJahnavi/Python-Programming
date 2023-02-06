@@ -1,7 +1,6 @@
 import requests
 
-"""Tequila username = PerakaJahnavi
-password = Jaya2001"""
+
 SHEETY_USERS_ENDPOINT = "https://api.sheety.co/9ca5914e93c19bec83a4c1c0b467d794/flightsClub/users"
 
 class DataManager:

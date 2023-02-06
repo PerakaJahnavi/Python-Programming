@@ -2,7 +2,7 @@ import requests
 from pprint import pprint
 from flight_data import FlightData
 TEQUILA_ENDPOINT = "https://tequila-api.kiwi.com"
-TEQUILA_API_KEY = "f5SXsU8JVlVK2S5QuX8_1wxztdAFqCMn"
+TEQUILA_API_KEY = ""
 SEARCH_ENDPOINT = "https://tequila-api.kiwi.com/v2/search"
 
 
