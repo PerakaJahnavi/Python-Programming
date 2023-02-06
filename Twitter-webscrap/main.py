@@ -5,8 +5,8 @@ import time
 
 PROMISED_DOWN = 150
 PROMISED_UP = 10
-TWITTER_EMAIL = "perakajahnavi01@gmail.com"
-TWITTER_PASSWORD = "Jaya@2001"
+TWITTER_EMAIL = "EMAIL_ID"
+TWITTER_PASSWORD = "PASSWORD"
 
 
 class InternetSpeedTwitterBot:
@@ -30,9 +30,10 @@ class InternetSpeedTwitterBot:
         time.sleep(10)
         twitter_username = self.driver.find_element(By.NAME, 'text')
         time.sleep(5)
-        twitter_username.send_keys("perakajahnavi01@gmail.com")
+        twitter_username.send_keys("USERNAME")
         time.sleep(5)
         twitter_username.send_keys(Keys.ENTER)
+
 
 internet_speed_twitter_bot = InternetSpeedTwitterBot()
 # internet_speed_twitter_bot.get_internet_speed()
