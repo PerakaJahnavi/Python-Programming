@@ -24,7 +24,7 @@ class LoginForm(FlaskForm):
 
 
 app = Flask(__name__)
-app.secret_key = "Jahnavi"
+app.secret_key = ""
 Bootstrap(app)
 
 
