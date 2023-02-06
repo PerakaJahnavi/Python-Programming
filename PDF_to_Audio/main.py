@@ -1,7 +1,7 @@
 import pyttsx3
 from PyPDF2 import PdfReader
 
-reader = PdfReader("C:/Users/jahna/OneDrive/Desktop/Jahnavi/Blog_Capstone_Project_Docs.pdf")
+reader = PdfReader("PATH_OF_FILE")
 number_of_pages = len(reader.pages)
 print(number_of_pages)
 for page in range(number_of_pages):
