@@ -4,38 +4,8 @@ import random
 import pandas
 import datetime as dt
 
-my_email = "panakaluperaka@gmail.com"
-password = "hyckjhinjkjzsrgn"
-
-# pythonanywhere: To run the task daily at the selected time
-""" username = PerakaJahnavi
-email = jahnaviperaka@gmail.com
-password = Jaya@2001 """
-
-# data = pandas.read_csv("birthdays.csv")
-
-# def letter():
-#     letter_num = random.randint(1, 3)
-#     birthday_person = "Jaya"
-#     with open(f"letter_templates/letter_{letter_num}.txt") as letter_content:
-#         letter_to_send = letter_content.read()
-#         letter_to_send = letter_to_send.replace("[NAME]", birthday_person)
-#         return letter_to_send
-#
-#
-# def send_wishes():
-#     connection = smtplib.SMTP("smtp.gmail.com")
-#     connection.starttls()
-#     connection.login(user=my_email, password=password)
-#     connection.sendmail(from_addr=my_email, to_addrs=to_address, msg=f"Subject: Happy Birthday\n\n{letter()}")
-#
-#
-# now = dt.datetime.now()
-# for month in data["month"]:
-#     if month == now.month:
-#         for day in data["day"]:
-#             if day == now.day:
-#                 send_wishes()
+my_email = ""
+password = ""
 
 
 today = dt.datetime.now()
