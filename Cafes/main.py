@@ -99,14 +99,17 @@ def likes():
 def cafe(cafe_id):
     form = CommentForm()
     selected_cafe = db.session.query(Cafes).get(cafe_id)
-    if form.validate_on_submit():
-        new_comment = Comment(text=form.comment_text.data,
-                              comment_user=current_user,
-                              cafe=selected_cafe
-                              )
-        db.session.add(new_comment)
-        db.session.commit()
-        return redirect(url_for('cafe', cafe_id=selected_cafe.id))
+    if current_user.is_authenticated:
+        if form.validate_on_submit():
+            new_comment = Comment(text=form.comment_text.data,
+                                  comment_user=current_user,
+                                  cafe=selected_cafe
+                                  )
+            db.session.add(new_comment)
+            db.session.commit()
+            return redirect(url_for('cafe', cafe_id=selected_cafe.id))
+    else:
+        return redirect(url_for('log_in'))
     return render_template("cafe.html", choosen_cafe=selected_cafe, form=form, current_user=current_user)
 
 
