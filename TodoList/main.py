@@ -70,28 +70,31 @@ def home():
 
 @app.route('/list', methods=["POST", "GET"])
 def all_list():
-    try:
-        event = request.form['listing'].capitalize()
-        new_event = TodoList(user_id=current_user.id,
-                             date=now,
-                             todo_list=event)
-        db.session.add(new_event)
-        db.session.commit()
-        all_todo = pd.read_sql(db.session.query(TodoList).filter_by(user_id=current_user.id).statement, db.session.bind)
-        return redirect(url_for('home', today_events=all_todo['todo_list']))
-    except KeyError:
-        event = request.args.get('event')
-        new_event = TodoList(user_id=current_user.id,
-                             date=now,
-                             todo_list=event)
-        db.session.add(new_event)
-        db.session.commit()
-        should_delete = TodoListCompleted.query.filter_by(todo_list=event).first()
-        db.session.delete(should_delete)
-        db.session.commit()
-        all_todo = pd.read_sql(db.session.query(TodoList).filter_by(user_id=current_user.id).statement, db.session.bind)
-        all_todo_completed = pd.read_sql(db.session.query(TodoListCompleted).filter_by(user_id=current_user.id).statement, db.session.bind)
-        return redirect(url_for('create', day_events=all_todo['todo_list'], completed_events=all_todo_completed['todo_list'], date=now))
+    if current_user.is_authenticated:
+        try:
+            event = request.form['listing'].capitalize()
+            new_event = TodoList(user_id=current_user.id,
+                                 date=now,
+                                 todo_list=event)
+            db.session.add(new_event)
+            db.session.commit()
+            all_todo = pd.read_sql(db.session.query(TodoList).filter_by(user_id=current_user.id).statement, db.session.bind)
+            return redirect(url_for('home', today_events=all_todo['todo_list']))
+        except KeyError:
+            event = request.args.get('event')
+            new_event = TodoList(user_id=current_user.id,
+                                 date=now,
+                                 todo_list=event)
+            db.session.add(new_event)
+            db.session.commit()
+            should_delete = TodoListCompleted.query.filter_by(todo_list=event).first()
+            db.session.delete(should_delete)
+            db.session.commit()
+            all_todo = pd.read_sql(db.session.query(TodoList).filter_by(user_id=current_user.id).statement, db.session.bind)
+            all_todo_completed = pd.read_sql(db.session.query(TodoListCompleted).filter_by(user_id=current_user.id).statement, db.session.bind)
+            return redirect(url_for('create', day_events=all_todo['todo_list'], completed_events=all_todo_completed['todo_list'], date=now))
+    else:
+        return redirect(url_for('login'))
 
 
 @app.route('/delete', methods=["POST", "GET"])
