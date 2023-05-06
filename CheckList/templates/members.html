@@ -1,0 +1,17 @@
+{% include "header.html" %}
+    <div class="container-fluid members-list">
+      <h1 class="main-date">My members</h1>
+       {% for member in members %}
+        <div class="container-fluid">
+            <h3 class="members">
+                <ul>
+                    <li>
+                        <a href="{{ url_for('presence', email=member.email) }}"> {{ member.name }} </a>
+                    </li>
+                </ul>
+            </h3>
+        </div>
+        {% endfor %}
+    </div>
+  </body>
+</html>

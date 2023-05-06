@@ -1,0 +1,143 @@
+/* Navigation Bar */
+.navbar {
+  padding: 0% 5%;
+  font-family: Roboto Slab;
+}
+
+.navbar-brand {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.nav-item {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.main-icon {
+  color: #00FFF6;
+}
+
+.main-heading {
+  color: #111;
+  padding: 4.5% 5% 0.5%;
+  font-size: 1.8rem;
+  background-color: #FAF8F1;
+}
+
+.login-register {
+    padding: 7% 0%;
+}
+
+.flash-message {
+    color: red;
+}
+
+.members {
+    color: #0D4C92;
+    padding: 1% 7%;
+    font-family: Open Sans;
+}
+
+.members-list{
+  padding: 6%;
+}
+
+.calendar {
+    padding: 5%
+}
+
+
+.main-date{
+    padding: 2% 2%;
+    font-weight: bold;
+    font-family: Montserrat;
+    font-size: 4rem;
+    color: #7DE5ED;
+}
+
+.weekday {
+    font-weight: bold;
+    font-family: Open Sans;
+    font-size: 2.5rem;
+    color: #7DE5ED;
+    text-align: center;
+}
+
+.calendar-info {
+    font-weight: bold;
+    font-family: Open Sans;
+    font-size: 3.5rem;
+    color: #FC4F00;
+    text-align: center;
+    padding: 5% 0 0 0;
+}
+
+.days{
+    font-family: Open Sans;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    color: #1746A2;
+}
+
+.each-line {
+    padding: 10px
+}
+
+.calendar-form {
+    text-align: right;
+    padding-left: 5%;
+}
+
+.today {
+    color: #FC9918;
+}
+
+.login-days {
+    color: green;
+}
+
+.work-image {
+    width: 100%;
+}
+
+@media screen and (max-width: 1030px) {
+  .main-heading {
+    padding: 9% 5% 1%;
+  }
+
+  .login-register {
+    padding: 15% 0%;
+  }
+
+  .members {
+    padding: 2% 7%;
+  }
+
+  .members-list, .calendar{
+    padding: 10% 7%;
+  }
+
+  .main-date{
+    padding: 4%;
+    font-size: 3rem;
+  }
+
+  .weekday {
+    font-size: 2rem;
+  }
+
+  .days{
+    font-size: 1.8rem;
+  }
+
+  .calendar-info {
+    padding: 10%;
+    font-size: 2.5rem;
+  }
+
+  .calendar-form {
+    padding-left: 15%;
+    text-align: center;
+  }
+}

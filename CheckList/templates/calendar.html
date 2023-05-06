@@ -1,0 +1,61 @@
+{% include "header.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+    <div class="container-fluid calendar">
+        <div class="row each-line">
+            <div class="col-lg-4 col-sm-3 calendar-info">
+                {{ year }}
+            </div>
+            <div class="col-lg-4 col-sm-3 calendar-info">
+                {{ month }}
+            </div>
+            <div class="col-lg-3 col-sm-4 calendar-form">
+                {{ wtf.quick_form(form, novalidate=True, button_map={"submit": "primary"}) }}
+            </div>
+        </div>
+        <div class="row each-line">
+            <div class="col weekday">
+              Mon
+            </div>
+            <div class="col weekday">
+              Tue
+            </div>
+            <div class="col weekday">
+              Wed
+            </div>
+            <div class="col weekday">
+              Thu
+            </div>
+            <div class="col weekday">
+              Fri
+            </div>
+            <div class="col weekday">
+              Sat
+            </div>
+            <div class="col weekday">
+              Sun
+            </div>
+        </div>
+        {% for week in cal %}
+            <div class="row each-line">
+               {% for day in week %}
+                    {% if day == 0 %}
+                        <div class="col days">
+                        </div>
+                    {% else %}
+                        {% if day in login_days %}
+                            <div class="col days login-days">
+                                {{ day }}
+                            </div>
+                        {% else %}
+                            <div class="col days">
+                                {{ day }}
+                            </div>
+                        {% endif %}
+                    {% endif %}
+               {% endfor %}
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
